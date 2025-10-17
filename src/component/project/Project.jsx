@@ -41,8 +41,8 @@ const Project = () => {
       github: "https://github.com/07Gautammishra/firstGamingWeb",
     },
     {
-      title: "NovaByte",
-      dec: "A gaming-themed landing page built with HTML, CSS, and JavaScript, featuring a futuristic design, hero section with “REDEFINE Gaming,” a nav bar, and a watch trailer button — showcasing layout, design, and basic interactivity for beginners.",
+      title: "Twitter clone",
+      dec: "A full-stack social media web app built using React.js, Node.js, Express, MongoDB, and Tailwind CSS. It includes JWT authentication, post creation, likes, comments, user suggestions, profile editing, image uploads via Cloudinary, and real-time notifications. The app also supports React Query for efficient data fetching and caching, providing a smooth and modern user experience.",
       image: project4,
       live: "",
       github: "https://github.com/07Gautammishra/x-clone",
@@ -160,5 +160,6 @@ const Project = () => {
     </section>
   );
 };
+
 
 export default Project;
