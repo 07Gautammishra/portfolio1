@@ -1,11 +1,11 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useLayoutEffect } from "react";
 
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem("pro_theme") || "light");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
