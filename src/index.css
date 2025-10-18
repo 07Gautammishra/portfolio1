@@ -11,6 +11,8 @@
 .fontOutfit {
   font-family: 'Outfit', sans-serif;
 }
-body{
+html, body {
+  background-color: transparent; /* or your dark color */
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
