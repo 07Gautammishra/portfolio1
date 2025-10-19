@@ -1,5 +1,5 @@
 import ScrollGradientText from "../textAnimation/ScrollGradientText"
-
+import CV from '../../assets/cv.pdf'
 
 const About = () => {
   return (
@@ -22,7 +22,7 @@ const About = () => {
          transition-all duration-500
          dark:from-gray-700 dark:to-gray-900
          dark:hover:from-indigo-500 dark:hover:to-purple-700
-         shadow-md hover:shadow-xl' download={""}>Download CV</a>
+         shadow-md hover:shadow-xl'  href={CV} download="Gautam_Mishra_CV.pdf">Download CV</a>
    </div>
    
 </section>
