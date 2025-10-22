@@ -66,17 +66,13 @@ const Project = () => {
       projectRefs.current.forEach((project, i) => {
         gsap.from(project, {
           opacity: 0,
-          y: 60, // Replicates initial: { y: 60 }
-          // Replicates transition: { delay: i * 0.2 }
-         
+          y: 70,
           ease: "power2.out",
           scrollTrigger: {
             trigger: project,
             start: "top 80%", 
             scrub: 1,
-            once: true// Start animation when the project item is 80% up the viewport
-             // Only run once (replicates viewport: { once: true })
-            // The amount: 0.3 is visually replicated by the 80% start position
+            once: true
           },
         });
       });
@@ -104,9 +100,9 @@ const Project = () => {
 
       <div className="flex flex-col gap-20">
         {projectlist.map((project, i) => (
-          <div // Replaced motion.div with standard div
+          <div 
             key={i}
-            ref={addToRefs} // Attach ref using the function
+            ref={addToRefs} 
             className={`flex flex-col md:flex-row items-center gap-10 ${
               i % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
@@ -116,6 +112,7 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className=" w-full md:w-[500px] object-cover rounded-2xl"
               />
             </div>
@@ -163,3 +160,4 @@ const Project = () => {
 
 
 export default Project;
+
