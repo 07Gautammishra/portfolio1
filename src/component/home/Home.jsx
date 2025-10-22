@@ -102,6 +102,7 @@ const Home = () => {
                     <img
                         src={image}
                         alt="Profile"
+                        loading="lazy"
                         className="object-cover object-top-right w-full h-full  filter grayscale  "
                     />
                 </div>
@@ -112,5 +113,6 @@ const Home = () => {
         </section>
     );
 };
+
 
 export default Home;
