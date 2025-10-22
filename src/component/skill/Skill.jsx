@@ -124,7 +124,6 @@ const Skill = () => {
                         <img
                             src={skill.src}
                             alt={skill.alt}
-                            loading="lazy"
                             className={`w-10 sm:w-16 md:w-20 transition-transform rounded-full duration-500 ${
                                 skill.src === ex ? "dark:invert" : ""
                             }`}
@@ -138,3 +137,4 @@ const Skill = () => {
 
 
 export default Skill;
+
