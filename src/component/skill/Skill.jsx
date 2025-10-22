@@ -65,10 +65,7 @@ const Skill = () => {
                     start: "top 70%",
                     end: "bottom 50%",
                     scrub: 1,
-                   
                     once: true
-                     // Should be added to stop re-running on scroll
-                    // markers: true, // REMOVED: Should be removed in production
                 },
                 y: 30,
                 scale: 0.6,
@@ -85,7 +82,6 @@ const Skill = () => {
         gsap.to(el, {
             scale: 1.1,
             rotate: 2,
-            // Removed complex boxShadow for cleaner animation without extra plugins
             duration: 0.4,
             ease: "power2.out",
         });
@@ -117,12 +113,9 @@ const Skill = () => {
                 {skills.map((skill, i) => (
                     <div
                         key={i}
-                        ref={addToSkillRefs} // Use the helper function to assign ref
+                        ref={addToSkillRefs} 
                         onMouseEnter={() => handleMouseEnter(skillRefs.current[i])}
                         onMouseLeave={() => handleMouseLeave(skillRefs.current[i])}
-                        // CONFLICT RESOLUTION: Removed 'hover:shadow-xl hover:scale-105'
-                        // and 'transition-all duration-500 ease-in-out'
-                        // to allow GSAP to fully control the hover state.
                         className="group relative flex items-center justify-center 
                             bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 
                             rounded-2xl p-6 shadow-md
@@ -131,6 +124,7 @@ const Skill = () => {
                         <img
                             src={skill.src}
                             alt={skill.alt}
+                            loading="lazy"
                             className={`w-10 sm:w-16 md:w-20 transition-transform rounded-full duration-500 ${
                                 skill.src === ex ? "dark:invert" : ""
                             }`}
@@ -141,5 +135,6 @@ const Skill = () => {
         </section>
     );
 };
+
 
 export default Skill;
