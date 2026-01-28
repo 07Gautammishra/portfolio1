@@ -1,5 +1,5 @@
 import ScrollGradientText from "../textAnimation/ScrollGradientText"
-import CV from '../../assets/cv.pdf'
+import CV from '../../assets/gaut(3).pdf'
 
 const About = () => {
   return (
@@ -30,3 +30,4 @@ const About = () => {
 }
 
 export default About
+
